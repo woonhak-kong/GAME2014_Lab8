@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 863922115743373149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 863922116352453703}
   - component: {fileID: 863922116352453702}
   - component: {fileID: 863922116352453696}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ Transform:
   m_Children:
   - {fileID: 863922115743373149}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &863922116352453700
 SpriteRenderer:
