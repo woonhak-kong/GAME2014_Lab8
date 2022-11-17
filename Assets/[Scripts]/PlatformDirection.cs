@@ -8,5 +8,5 @@ public enum PlatformDirection
     VERTICAL,
     DIAGONAL_UP,
     DIAGONAL_DOWN,
-    
+    CUSTOM
 }
