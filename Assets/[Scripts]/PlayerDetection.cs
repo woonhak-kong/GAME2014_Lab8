@@ -9,12 +9,15 @@ public class PlayerDetection : MonoBehaviour
     public bool LOS;
     public Transform playerTransform;
 
+    public Vector2 DirectionToPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = FindObjectOfType<PlayerBehavior>().transform;
         LOS = false;
         playerDetected = false;
+        DirectionToPlayer = Vector2.zero;
     }
 
     // Update is called once per frame
@@ -23,7 +26,18 @@ public class PlayerDetection : MonoBehaviour
         if (playerDetected)
         {
             LOS = Physics2D.Linecast(transform.position, playerTransform.position, CollisionLayerMask);
+
+            Vector2 direction = playerTransform.position - transform.position;
+            DirectionToPlayer = direction.x < 0 ? Vector2.left : Vector2.right;
             
+            if (DirectionToPlayer.x != transform.parent.localScale.x)
+            {
+                LOS = true;
+            }
+            else
+            {
+                LOS = false;
+            }
         }
 
     }

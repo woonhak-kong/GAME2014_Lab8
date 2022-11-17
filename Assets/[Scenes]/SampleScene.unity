@@ -168,9 +168,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2adb5758fd70543a90c1ca934430c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
   playerDetected: 0
   LOS: 0
   playerTransform: {fileID: 0}
+  DirectionToPlayer: {x: 0, y: 0}
 --- !u!58 &43314854
 CircleCollider2D:
   m_ObjectHideFlags: 0
